@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html >
+<body>
+ <div class="login">
+	<h1>Eligibility for Personal Loan</h1>
+    <form action="{{ url_for('predict')}}"method="post">
+
+      <t>Age:  </t><input type="text" name="age" placeholder="Enter Age" required="required" /><br><br>
+    	<t>Experience:  </t><input type="text" name="exp" placeholder="Enter Experience" required="required" /><br><br>
+    	<t>Income:  </t><input type="text" name="inc" placeholder="Enter Income" required="required" /><br><br>
+      <t>Family:  </t><input type="text" name="FS" placeholder="Enter Family Size" required="required" /><br><br>
+    	<t>CCAvg:  </t><input type="text" name="ccavg" placeholder="Enter your CCAvg" required="required" /><br><br>
+      <t>Mortgage:  </t><input type="text" name="mor" placeholder="Enter Mortgage" required="required" /><br><br>
+      <t>Education:  </t><input type="text" name="Education" placeholder="Enter Education level" required="required" /><br><br>
+      <t>Securities Account:  </t><input type="text" name="Securities_Account" placeholder="Securities Account(if yes 1 or 0)" required="required" /><br><br>
+      <t>CD Account:  </t><input type="text" name="CD_Account" placeholder="CD Account ( if yes 1 or 0 )" required="required" /><br><br>
+		  <t>Online:  </t><input type="text" name="Online" placeholder="Online Facility (if yes 1 or 0)" required="required" /><br><br>
+      <t>CreditCard:  </t><input type="text" name="CreditCard" placeholder="Credit Card (if yes 1 or 0)" required="required" /><br><br>
+
+        <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button><br>
+    </form>
+
+   <br>
+   <br>
+   {{ prediction_text }}
+
+ </div>
+
+
+</body>
+</html>
